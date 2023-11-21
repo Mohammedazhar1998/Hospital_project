@@ -1,0 +1,129 @@
+<!-- { % extends 'nav.html' % } -->
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/bootstrap4/bootstrap.min.css' %}">
+    <link href="{% static 'plugins/font-awesome-4.7.0/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="{% static 'plugins/OwlCarousel2-2.2.1/owl.carousel.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'plugins/OwlCarousel2-2.2.1/owl.theme.default.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'plugins/OwlCarousel2-2.2.1/animate.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/about.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/about_responsive.css' %}">
+
+    <title>DEPARTMENTS</title>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div style="background-color: aqua;" class="container-fluid">
+      <a class="navbar-brand" href="#"><h1>CITY HOSPITAL</h1></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/">HOME</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/about">ABOUT</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/doctors">DOCTORS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/departments">DEPARTMENTS</a>
+          </li>
+          <li class="nav-item"> 
+            <a class="nav-link" href="/contact">CONTACT US</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/medicine">MEDICINE</a>
+          </li>
+          <!-- <li class="nav-item">
+            <a class="nav-link" href="/register">REGISTER</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"> -->
+              
+            </a>
+            <!-- <ul class="dropdown-menu"> -->
+            {% if user.is_authenticated %}
+        <li class="nav-item"><a class="nav-link active" aria-current="page" href="/logout">LOGOUT</a></li>
+        {% else %}
+        <li class="nav-item"><a class="nav-link active" aria-current="page" href="/register">REGISTER</a></li>
+        <li class="nav-item"><a class="nav-link active" aria-current="page" href="/login">LOGIN</a></li>
+        {% endif %}
+            <!-- <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="/login">LOGIN</a></li>
+              <li><a class="dropdown-item" href="/logout">LOGOUT</a></li>
+              
+            
+            </ul> -->
+          </li>
+        </ul>
+      </div>
+  </div>
+  
+  </nav> 
+
+      <center>
+
+         <h1 style="background-color: aqua;">OUR DEPARTMENT PAGE</h1>
+
+         <br>
+        <div style="background-color: darkolivegreen;" >
+    
+        <h1>DERMATOLOGY</h1>
+        <p>The dermatology department is equipped with advanced facilities for the diagonosis and treatment of different disorders affecting babies, children and adults.</p>
+        </div>
+
+        <br>
+
+        <div style="background-color: darkolivegreen;" >
+    
+            <h1>CARDIOLOGY</h1>
+            <p>Our ultramodern 24×7 Cardiac unit, handled by renowned Cardiologists, Cardiothoracic surgeons, Electrophysiologists and Anesthetists, offer heart care services across the spectrum of adult heart care like Coronary, Structural and Peripheral vascular diseases, electrophysiology and device therapies</p>
+            </div>
+
+        <br>
+
+        <div style="background-color: darkolivegreen;" >
+    
+            <h1>PAEDIATRICS</h1>
+            <p>Our Paediatric services ensure that the medical needs of your family are met from childbirth onwards, as your child grows and develops as a charming individual.
+
+            </p>
+            </div>
+
+        <br>
+        <div style="background-color: darkolivegreen;" >
+    
+                <h1>NEUROLOGY</h1>
+                <p>The neurosurgery department works in collaboration with other departments to provide surgical solutions to complex problems involving the brain, cranio-facial area and spine. We also provide clinical evaluation, diagnosis, treatment and management of a range of medical conditions.</p>
+    
+                </div>
+    
+        </center>
+
+        <script src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
+        <script src="{% static 'styles/bootstrap4/popper.js' %}"></script>
+        <script src="{% static 'styles/bootstrap4/bootstrap.min.js' %}"></script>
+        <script src="{% static 'plugins/greensock/TweenMax.min.js' %}"></script>
+        <script src="{% static 'plugins/greensock/TimelineMax.min.js' %}"></script>
+        <script src="{% static 'plugins/scrollmagic/ScrollMagic.min.js' %}"></script>
+        <script src="{% static 'plugins/greensock/animation.gsap.min.js' %}"></script>
+        <script src="{% static 'plugins/greensock/ScrollToPlugin.min.js' %}"></script>
+        <script src="{% static 'plugins/OwlCarousel2-2.2.1/owl.carousel.js' %}"></script>
+        <script src="{% static 'plugins/easing/easing.js' %}"></script>
+        <script src="{% static 'plugins/parallax-js-master/parallax.min.js' %}"></script>
+        <script src="{% static 'js/about.js' %}"></script>
+
+
+
+</body>
+</html>
